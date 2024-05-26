@@ -1,0 +1,1665 @@
+@font-face {
+  font-family: "Balsamiq-Sans-Regular";
+  src: url(/fonts/BalsamiqSans-Regular.ttf);
+}
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: url(/fonts/Montserrat-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url(/fonts/Montserrat-Regular.ttf);
+}
+.products__categories_tab {
+  padding: 0px 20px;
+  background-color: #F3C9D3;
+  text-align: center;
+  align-content: center;
+}
+
+.advantages__title, .news__title, .popsets__title, .holidays__title, .products__title {
+  font-size: 30px;
+  font-family: "Montserrat-SemiBold";
+  text-align: center;
+}
+
+.suggest__wedding-suggestion_arrow, .suggest__set-print_arrow, .suggest__collect-own_arrow, .suggest__ready-sets_arrow {
+  cursor: pointer;
+  position: absolute;
+  width: 80px;
+  height: 50px;
+  margin-top: -30px;
+}
+.suggest__wedding-suggestion_arrow div, .suggest__set-print_arrow div, .suggest__collect-own_arrow div, .suggest__ready-sets_arrow div {
+  position: relative;
+  top: 20px;
+  width: 25px;
+  height: 2px;
+  background-color: #000;
+  left: 0;
+  display: block;
+}
+.suggest__wedding-suggestion_arrow div::after, .suggest__set-print_arrow div::after, .suggest__collect-own_arrow div::after, .suggest__ready-sets_arrow div::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  top: -3px;
+  right: -2px;
+  background-color: #000;
+  transform: rotate(45deg);
+}
+.suggest__wedding-suggestion_arrow div::before, .suggest__set-print_arrow div::before, .suggest__collect-own_arrow div::before, .suggest__ready-sets_arrow div::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  top: 3px;
+  right: -2px;
+  background-color: #000;
+  transform: rotate(-45deg);
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #F7F7F7;
+}
+
+.wrapper {
+  display: grid;
+  grid-template: minmax(160px, auto) 1fr minmax(320px, auto)/1fr;
+  grid-template-areas: "header" "content" "footer";
+}
+
+.header {
+  grid-area: header;
+  width: 86%;
+  padding-left: 90px;
+  padding-right: 90px;
+  background-color: #fff;
+  display: grid;
+  align-content: center;
+}
+.header__list {
+  display: grid;
+  grid-auto-flow: column;
+  justify-items: center;
+  align-items: center;
+  width: 90%;
+}
+.header__link {
+  text-decoration: none;
+  color: #2B1414;
+}
+.header a:hover {
+  color: #ff4d6d;
+}
+.header li {
+  list-style-type: none;
+  font-size: 1.1em;
+  font-family: "Balsamiq-Sans-Regular";
+  text-transform: uppercase;
+}
+.header li:nth-child(2) {
+  margin-right: 200px;
+  margin-left: 10px;
+}
+.header li:nth-child(3) {
+  margin-left: 170px;
+}
+.header__img1 {
+  margin-left: 580px;
+  position: absolute;
+  margin-top: -35px;
+}
+.header__img2 {
+  width: 25px;
+  margin: 0;
+}
+.header__img3 {
+  position: absolute;
+  margin-left: 1225px;
+  margin-top: -45px;
+}
+
+.popup {
+  display: none;
+}
+
+.hamb-filed {
+  display: none;
+}
+
+.main {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.content {
+  grid-area: content;
+}
+.content__head {
+  margin-right: 70px;
+}
+.content__suggest {
+  margin-top: 85px;
+}
+.content__products {
+  margin-top: 85px;
+}
+.content__holidays {
+  margin-top: 85px;
+}
+.content__popsets {
+  margin-top: 85px;
+}
+.content__news {
+  margin-top: 85px;
+}
+.content__advantages {
+  margin-top: 85px;
+}
+
+.head {
+  display: grid;
+  grid-template: 500px/1fr 1fr;
+}
+.head__bgimg {
+  width: 60%;
+  margin-left: -60px;
+  position: absolute;
+}
+.head__foundation_title {
+  font-size: 1.5em;
+  font-family: "Montserrat-SemiBold";
+  text-transform: uppercase;
+}
+.head__foundation_subtitle {
+  font-size: 1.2em;
+  font-family: "Montserrat-SemiBold";
+  margin-top: -15px;
+}
+.head__title {
+  font-size: 2.5em;
+  font-family: "Montserrat-SemiBold";
+  margin-top: -20px;
+}
+.head__subtitle {
+  font-size: 1.4em;
+  font-family: "Balsamiq-Sans-Regular";
+  margin-top: -20px;
+}
+.head__text {
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  width: 600px;
+  margin-left: 600px;
+  grid-column: 2;
+}
+
+.suggest {
+  display: grid;
+  grid-template: 1fr 1fr/610px 610px;
+  grid-gap: 30px;
+}
+.suggest__ready-sets {
+  background-color: #FFDBC3;
+  padding: 35px 54px;
+  text-align: center;
+}
+.suggest__ready-sets h1 {
+  font-size: 1.4em;
+  font-family: "Montserrat-SemiBold";
+  margin-bottom: -3px;
+}
+.suggest__ready-sets p {
+  font-size: 1.1em;
+  font-family: "Balsamiq-Sans-Regular";
+  margin-bottom: -15px;
+}
+.suggest__ready-sets_arrow {
+  margin-left: 365px;
+}
+.suggest__collect-own {
+  background-color: #f8c6ce;
+  padding: 35px 54px;
+  text-align: center;
+}
+.suggest__collect-own h1 {
+  font-size: 1.4em;
+  font-family: "Montserrat-SemiBold";
+  margin-bottom: -3px;
+}
+.suggest__collect-own p {
+  font-size: 1.1em;
+  font-family: "Balsamiq-Sans-Regular";
+}
+.suggest__collect-own_arrow {
+  margin-left: 385px;
+}
+.suggest__set-print {
+  background-color: #b8e9b7;
+  padding: 35px 54px;
+  text-align: center;
+}
+.suggest__set-print h1 {
+  font-size: 1.4em;
+  font-family: "Montserrat-SemiBold";
+  margin-bottom: -3px;
+}
+.suggest__set-print p {
+  font-size: 1.1em;
+  font-family: "Balsamiq-Sans-Regular";
+}
+.suggest__set-print_arrow {
+  margin-left: 420px;
+}
+.suggest__wedding-suggestion {
+  background-color: #FDD5CD;
+  padding: 35px 54px;
+  text-align: center;
+}
+.suggest__wedding-suggestion h1 {
+  font-size: 1.4em;
+  font-family: "Montserrat-SemiBold";
+  margin-bottom: -3px;
+}
+.suggest__wedding-suggestion p {
+  font-size: 1.1em;
+  font-family: "Balsamiq-Sans-Regular";
+}
+.suggest__wedding-suggestion_arrow {
+  margin-left: 380px;
+}
+
+.products__title {
+  text-align: left;
+  margin-left: 550px;
+}
+.products__categories {
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-gap: 30px;
+  margin-top: 20px;
+  font-size: 1em;
+  font-family: "Montserrat-SemiBold";
+}
+.products__categories .cat-active {
+  background-color: #B3D9F3;
+}
+.products__content {
+  margin-top: 30px;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  grid-gap: 60px;
+  width: 1260px;
+  position: relative;
+  left: 0;
+  transition: all ease 1s;
+  margin-bottom: 30px;
+}
+.products__items {
+  margin-top: 30px;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  grid-gap: 60px;
+  left: 0;
+}
+.products__item {
+  width: 270px;
+  height: 400px;
+  background-color: #ff4d6d;
+  border-radius: 1.9%;
+}
+.products__heading {
+  font-size: 0.8em;
+  font-family: Montserrat-Regular;
+  color: #f7ebe5;
+  width: 230px;
+  text-align: center;
+  margin-left: 20px;
+}
+.products__sliders {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  grid-gap: 10px;
+  width: 1200px;
+  position: relative;
+}
+.products__slider {
+  width: 12px;
+  height: 12px;
+  background-color: #e98ea5;
+}
+.products .slide-active {
+  width: 12px;
+  height: 12px;
+  background-color: #E7426A;
+}
+.products__btn {
+  background-color: #E7426A;
+  width: 100px;
+  height: 45px;
+  border: 0;
+  margin-right: 15px;
+  font-size: 1.1em;
+  font-family: Montserrat-Regular;
+  color: #fff;
+}
+
+.cookies {
+  font-size: 1em;
+  font-family: Montserrat-Regular;
+  position: fixed;
+  z-index: 100;
+  left: 2rem;
+  bottom: 2rem;
+  padding: 15px;
+  max-width: 430px;
+  border-radius: 10px;
+  color: #f7ebe5;
+  background-color: #e98ea5;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.04), 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cookies__link {
+  text-decoration: underline;
+  color: rgb(255, 223, 18);
+}
+.cookies__btn {
+  cursor: pointer;
+  background-color: #E7426A;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  margin-left: 15px;
+}
+
+.holidays *,
+.holidays *::before,
+.holidays *::after {
+  box-sizing: border-box;
+}
+.holidays__item {
+  margin-bottom: 2rem;
+  border-radius: 0.25rem;
+}
+.holidays__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 3rem 0.75rem 2rem;
+  color: #292929;
+  font-size: 1.4em;
+  font-family: Montserrat-SemiBold;
+  background-color: #B3D9F3;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-out;
+}
+.holidays__header img {
+  margin-right: 15px;
+}
+.holidays__header::after {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 3rem;
+  margin-left: auto;
+  background-image: url(/images/holidays/mark.png);
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  transform: rotate(90deg);
+  content: "";
+}
+.holidays__item_show .holidays__header::after {
+  transform: rotate(-90deg);
+}
+.holidays__header:hover {
+  background-color: #E7426A;
+}
+.holidays__item_hidden .holidays__header {
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+.holidays__body {
+  padding: 0.75rem 1rem;
+  overflow: hidden;
+  background: #fff;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+.holidays__item:not(.holidays__item_show) .holidays__body {
+  display: none;
+}
+.holidays__title {
+  text-align: left;
+  margin-left: 430px;
+}
+.holidays__subtitle {
+  font-size: 1.4em;
+  font-family: Montserrat-SemiBold;
+  margin: 0;
+  padding-bottom: 15px;
+}
+.holidays__description {
+  color: #292929;
+  font-size: 1.1em;
+  font-family: Montserrat-Regular;
+}
+.holidays__description p {
+  margin: 0;
+}
+.holidays__description span {
+  font-family: "Montserrat-SemiBold";
+}
+.holidays__img {
+  float: left;
+  margin-right: 40px;
+}
+.holidays__buy {
+  padding-right: 20px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template: 1fr/1fr 1fr;
+  width: 30%;
+}
+.holidays__sale {
+  font-family: "Montserrat-SemiBold";
+  color: #969696;
+  text-decoration: line-through;
+  padding-top: 60px;
+}
+.holidays__price {
+  font-size: 1.3em;
+  font-family: Montserrat-SemiBold;
+  color: #E7426A;
+  text-decoration: none;
+}
+.holidays__busket {
+  display: grid;
+  grid-auto-flow: column;
+  text-decoration: none;
+  width: 90%;
+}
+.holidays__busket p {
+  font-size: 1.1em;
+  font-family: Montserrat-SemiBold;
+  color: #292929;
+  align-self: center;
+}
+.holidays__busket img {
+  width: 21px;
+  justify-self: center;
+  align-self: center;
+}
+
+.popsets__title {
+  text-align: left;
+  margin-left: 450px;
+}
+.popsets__items {
+  margin-top: 50px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template: 1fr/1fr 1fr 1fr;
+  width: 1260px;
+  margin: 0 auto;
+  grid-gap: 65px;
+}
+.popsets__item {
+  background-color: #fff;
+  width: 370px;
+  height: auto;
+}
+.popsets__heading {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+.popsets__name {
+  font-size: 1.4em;
+  font-family: Montserrat-SemiBold;
+  text-decoration: none;
+  color: #292929;
+}
+.popsets__description {
+  font-size: 1.1em;
+  font-family: Balsamiq-Sans-Regular;
+  margin-top: 10px;
+}
+.popsets__description1 {
+  font-size: 1.1em;
+  font-family: Balsamiq-Sans-Regular;
+  margin-top: -13px;
+}
+.popsets__buy {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template: 1fr/1fr 1fr;
+  margin-top: 35px;
+}
+.popsets__price {
+  text-decoration: none;
+  color: #E7426A;
+  font-size: 1.3em;
+  font-family: Montserrat-SemiBold;
+  align-self: center;
+}
+.popsets__busket {
+  display: grid;
+  grid-auto-flow: column;
+  text-decoration: none;
+}
+.popsets__busket p {
+  font-size: 1.1em;
+  font-family: Montserrat-SemiBold;
+  color: #292929;
+}
+.popsets__busket img {
+  width: 21px;
+  justify-self: center;
+  align-self: center;
+}
+
+.news__title {
+  text-align: left;
+  margin-left: 550px;
+  margin-bottom: 40px;
+}
+.news__items {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 65px;
+  width: 1260px;
+  margin: 0 auto;
+}
+.news__item {
+  background-color: #fff;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  width: 330px;
+}
+.news__image {
+  margin-left: -20px;
+}
+.news__date {
+  font-size: 1.1em;
+  font-family: Montserrat-Regular;
+  color: #969696;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.news__name {
+  font-size: 1.4em;
+  font-family: Montserrat-SemiBold;
+  text-decoration: none;
+  color: #292929;
+}
+.news__description {
+  font-size: 1.1em;
+  font-family: Balsamiq-Sans-Regular;
+  margin-top: 10px;
+}
+
+.advantages__title {
+  text-align: left;
+  margin-left: 400px;
+}
+.advantages__box {
+  background-color: #fff;
+  width: 50%;
+  margin: 0 auto;
+  padding: 50px 140px;
+}
+.advantages__header {
+  display: grid;
+  grid-auto-flow: column;
+  width: 71.2%;
+  margin: 0 auto;
+  font-size: 0.7em;
+  font-family: Montserrat-SemiBold;
+  grid-gap: 1%;
+}
+.advantages__tab {
+  background-color: #F3C9D3;
+  text-align: center;
+  padding: 10px 15px;
+  font-size: 1.6em;
+  font-family: Montserrat-SemiBold;
+}
+.advantages__block {
+  display: grid;
+  grid-template: 1fr/1fr 1fr;
+}
+.advantages__description {
+  font-size: 1.5em;
+  font-family: Balsamiq-Sans-Regular;
+  align-self: center;
+}
+.advantages .hide {
+  display: none;
+}
+.advantages .show {
+  display: block;
+}
+
+.tab-active {
+  background-color: #B3D9F3;
+  text-align: center;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.footer {
+  padding: 80px 110px;
+  background-color: #EBEDEE;
+  margin-top: 110px;
+  display: grid;
+  grid-template: 1fr/390px 1fr 180px;
+  grid-gap: 40px;
+  width: 83%;
+}
+.footer__icons {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template: 150px/1fr 1fr 1fr;
+}
+.footer__icon {
+  display: grid;
+  grid-auto-flow: row;
+  font-size: 0.9em;
+  font-family: Balsamiq-Sans-Regular;
+  text-align: center;
+}
+.footer__icon img {
+  justify-self: center;
+}
+.footer__icon:nth-child(2) img {
+  margin-bottom: 4px;
+}
+.footer__icon:nth-child(3) img {
+  margin-bottom: 30px;
+}
+.footer__end {
+  font-size: 0.9em;
+  font-family: Balsamiq-Sans-Regular;
+  color: #969696;
+  margin-top: 50px;
+}
+.footer__blocks {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 30px;
+}
+.footer__blocks li {
+  list-style-type: none;
+}
+.footer__block {
+  font-size: 1.1em;
+  font-family: Balsamiq-Sans-Regular;
+}
+.footer__block li {
+  margin-top: 20px;
+}
+.footer__block a {
+  text-decoration: none;
+  color: #292929;
+}
+.footer__block a:hover {
+  color: #E7426A;
+}
+.footer__name {
+  font-size: 0.8em;
+  font-family: Balsamiq-Sans-Regular;
+  text-transform: uppercase;
+}
+.footer__phone h2 {
+  font-size: 1.2em;
+  font-family: Balsamiq-Sans-Regular;
+  color: #292929;
+}
+.footer__phone h3 {
+  font-size: 1.1em;
+  font-family: Balsamiq-Sans-Regular;
+  color: #292929;
+  margin-left: 43px;
+}
+.footer__socials {
+  margin-top: 110px;
+}
+.footer__socials img {
+  margin-left: 12px;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    padding: 70px;
+  }
+  .header__link:nth-child(2) {
+    margin: 0;
+  }
+  .header li:nth-child(2) {
+    margin: 0;
+  }
+  .header__list {
+    grid-template: 21px/120px 200px 260px 200px;
+    grid-gap: 20px;
+  }
+  .header li:nth-child(3) {
+    justify-self: end;
+  }
+  .header li:nth-child(4) {
+    justify-self: start;
+  }
+  .header__img1 {
+    margin-left: 370px;
+  }
+  .header__img3 {
+    margin-left: 830px;
+  }
+  .head {
+    width: 70%;
+    margin-right: 70px;
+  }
+  .head__text {
+    margin: 0;
+    width: 470px;
+  }
+  .head__bgimg {
+    margin-top: 50px;
+    margin-left: -30px;
+  }
+  .suggest {
+    width: 76%;
+    grid-template: 45% 45%/45% 45%;
+  }
+  .suggest__ready-sets_arrow {
+    margin-left: 280px;
+  }
+  .suggest__collect-own_arrow {
+    margin-left: 300px;
+  }
+  .suggest__set-print_arrow {
+    margin-left: 330px;
+    margin-top: -31px;
+  }
+  .suggest__wedding-suggestion_arrow {
+    margin-left: 290px;
+    margin-top: -31px;
+  }
+  .products__title {
+    width: 12%;
+    margin-left: 380px;
+    text-align: center;
+  }
+  .products__sliders {
+    margin-left: -280px;
+    margin-top: -35px;
+  }
+  .holidays__title {
+    width: 36%;
+    text-align: center;
+    margin-left: 230px;
+  }
+  .holidays__body {
+    width: 70.6%;
+    padding: 60px 60px;
+  }
+  .holidays__img {
+    width: 70%;
+    margin-bottom: 40px;
+    margin-right: 0;
+    margin-left: 120px;
+  }
+  .holidays__header {
+    width: 890px;
+    height: 90px;
+    font-size: 1.6em;
+  }
+  .holidays__subtitle {
+    font-size: 1.7em;
+    text-align: center;
+  }
+  .holidays__desc-set {
+    font-size: 1.4em;
+    text-align: center;
+  }
+  .holidays__sale {
+    font-size: 1.3em;
+    padding-left: 140px;
+    padding-top: 60px;
+  }
+  .holidays__buy {
+    font-size: 1.4em;
+    width: 100%;
+    padding-right: 0px;
+    margin-top: -20px;
+  }
+  .holidays__busket {
+    justify-self: center;
+    padding-left: 25px;
+    width: 60%;
+  }
+  .holidays__busket img {
+    width: 27px;
+  }
+  .holidays__price {
+    justify-self: center;
+  }
+  .popsets__title {
+    width: 32%;
+    text-align: center;
+    margin-left: 260px;
+  }
+  .popsets__item:nth-child(3) {
+    display: none;
+  }
+  .popsets__items {
+    grid-template: 1fr/1fr 1fr;
+    width: 70%;
+    grid-gap: 0;
+    margin: 0;
+  }
+  .popsets__item:nth-child(2) {
+    justify-self: end;
+  }
+  .popsets__item {
+    width: 410px;
+  }
+  .popsets__item p {
+    font-size: 1.1em;
+  }
+  .popsets__name {
+    font-size: 1.6em;
+  }
+  .popsets__image img {
+    width: 100%;
+  }
+  .popsets__buy {
+    font-size: 1.1em;
+  }
+  .news__title {
+    width: 12%;
+    text-align: center;
+    margin-left: 370px;
+  }
+  .news__item:nth-child(3) {
+    display: none;
+  }
+  .news__items {
+    grid-template: 1fr/1fr 1fr;
+    width: 70%;
+    grid-gap: 70px;
+    margin: 0;
+  }
+  .news__item {
+    width: 370px;
+  }
+  .news__item p {
+    font-size: 1.2em;
+    margin-top: 15px;
+  }
+  .news__image {
+    margin-right: -21px;
+  }
+  .news__image img {
+    width: 100%;
+  }
+  .news__description {
+    font-size: 1.2em;
+  }
+  .news__date {
+    font-size: 1.2em;
+  }
+  .advantages__title {
+    width: 41%;
+    margin-left: 210px;
+  }
+  .advantages__box {
+    margin: 0;
+    width: 49%;
+  }
+  .advantages__header {
+    font-size: 0.6em;
+    margin: 0;
+  }
+  .footer {
+    margin-top: 0;
+    grid-template: 1fr 1fr 1fr/1fr;
+  }
+  .footer__icons {
+    width: 60%;
+    font-size: 1.4em;
+    grid-gap: 50px;
+    margin-left: 70px;
+  }
+  .footer__icons img {
+    width: 30%;
+  }
+  .footer__icon:nth-child(3) img {
+    width: 20%;
+  }
+  .footer__end {
+    position: absolute;
+    font-size: 1.2em;
+    margin-top: 410px;
+    width: 45%;
+  }
+  .footer__blocks {
+    width: 70%;
+    margin-left: 20px;
+  }
+  .footer__blocks a {
+    font-size: 1.1em;
+  }
+  .footer__contacts {
+    width: 70%;
+  }
+  .footer__phone {
+    text-align: right;
+  }
+  .footer__socials {
+    margin-top: 50px;
+    text-align: right;
+  }
+  .footer__socials img {
+    width: 7%;
+  }
+}
+@media (max-width: 768px) {
+  .main {
+    padding: 40px;
+  }
+  .content {
+    width: 100%;
+  }
+  .header {
+    background-color: #f7ebe5;
+    width: 60%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .header__img1 {
+    margin-left: 300px;
+    margin-top: -50px;
+  }
+  .header__img2 {
+    margin-left: -730px;
+  }
+  .header__img3 {
+    margin-left: 680px;
+    margin-top: -10px;
+  }
+  .header__menu .header__list {
+    display: none;
+  }
+  .hamb-filed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .popup {
+    display: none;
+    position: fixed;
+    width: 40%;
+    height: 40%;
+    top: 130px;
+    right: -100%;
+    z-index: 200;
+    display: flex;
+    background-color: #e98ea5;
+    transition: 0.3s;
+    font-size: 1.4em;
+    font-family: Montserrat-SemiBold;
+  }
+  .popup.open {
+    left: 0;
+  }
+  .popup .header__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    list-style-type: none;
+  }
+  .popup .header__list > li {
+    margin: 15px 0;
+  }
+  .head {
+    grid-template: 1fr 540px/172% 0;
+    width: 30%;
+    margin: 0;
+  }
+  .head__title {
+    padding-left: 15px;
+  }
+  .head__bgimg {
+    margin-left: 50px;
+    padding-top: 440px;
+    width: 87%;
+  }
+  .head__text {
+    grid-row: 1;
+    grid-column: 1;
+    margin: 0 auto;
+    padding-left: 40px;
+  }
+  .head__foundation {
+    padding-bottom: 40px;
+    padding-top: 60px;
+    padding-left: 10px;
+  }
+  .head__foundation_title {
+    font-size: 1.8em;
+  }
+  .head__foundation_subtitle {
+    font-size: 1.4em;
+  }
+  .suggest {
+    grid-template: 1fr 1fr 1fr 1fr/72%;
+    margin: 0;
+  }
+  .suggest h1 {
+    font-size: 1.5em;
+  }
+  .suggest p {
+    font-size: 1.2em;
+  }
+  .suggest__ready-sets_arrow {
+    margin-left: 410px;
+    margin-top: -32px;
+  }
+  .suggest__collect-own_arrow {
+    margin-left: 435px;
+  }
+  .suggest__set-print_arrow {
+    margin-left: 470px;
+  }
+  .suggest__wedding-suggestion_arrow {
+    margin-left: 430px;
+  }
+  .products__title {
+    margin-left: 290px;
+  }
+  .products__sliders {
+    justify-content: center;
+    margin-top: -20px;
+  }
+  .holidays__title {
+    margin-left: 140px;
+  }
+  .holidays__body {
+    width: 55.55%;
+  }
+  .holidays__description {
+    width: 49%;
+  }
+  .holidays__description p {
+    margin-left: -50px;
+  }
+  .holidays__img {
+    width: 90%;
+    margin-left: 0;
+    padding-left: 55px;
+    padding-top: 60px;
+    margin-bottom: 20px;
+  }
+  .holidays__header {
+    width: 700px;
+    height: 110px;
+    font-size: 1.6em;
+  }
+  .holidays__subtitle {
+    font-size: 1.8em;
+    text-align: center;
+    margin-left: 120px;
+    margin-right: -200px;
+  }
+  .holidays__desc-set {
+    font-size: 1.4em;
+    margin-left: 160px;
+    margin-right: -200px;
+    text-align: center;
+  }
+  .holidays__sale {
+    font-size: 1.3em;
+    width: 700px;
+    padding-left: 290px;
+  }
+  .holidays__buy {
+    grid-template: 1fr 1fr/1fr;
+    font-size: 1.4em;
+    width: 100%;
+    padding-right: 0px;
+  }
+  .holidays__busket {
+    justify-self: center;
+    padding-left: 25px;
+    width: 30%;
+  }
+  .holidays__busket img {
+    width: 25px;
+  }
+  .holidays__price {
+    justify-self: center;
+  }
+  .popsets__title {
+    margin: 0;
+    width: 32%;
+    padding-left: 140px;
+  }
+  .popsets__items {
+    grid-template: 1fr 1fr 1fr/1fr;
+    width: 500px;
+    margin: 0;
+    grid-gap: 60px;
+  }
+  .popsets__item {
+    width: 700px;
+  }
+  .popsets__item:nth-child(3) {
+    display: block;
+  }
+  .popsets__image {
+    width: 80%;
+    padding-left: 65px;
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+  .popsets__image img {
+    width: 100%;
+  }
+  .popsets__heading {
+    text-align: center;
+    padding-left: 0;
+    margin-top: 0px;
+  }
+  .popsets__heading p {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .popsets__name {
+    font-size: 2.1em;
+  }
+  .popsets p {
+    font-size: 1.3em;
+  }
+  .popsets__buy {
+    width: 560px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+  .popsets__price {
+    justify-self: start;
+    font-size: 1.7em;
+  }
+  .popsets__busket {
+    justify-self: end;
+    width: 65%;
+    font-size: 1.2em;
+  }
+  .popsets__busket img {
+    width: 90%;
+  }
+  .popsets__busket p {
+    justify-self: end;
+    margin-top: 26px;
+  }
+  .news__title {
+    margin: 0;
+    width: 12%;
+    padding-left: 280px;
+    font-size: 2.2em;
+    margin-bottom: 35px;
+  }
+  .news__items {
+    grid-template: 1fr 1fr 1fr/1fr;
+    width: 500px;
+    margin: 0;
+  }
+  .news__item {
+    padding: 65px 85px;
+    width: 530px;
+  }
+  .news__item:nth-child(3) {
+    display: block;
+  }
+  .news__image {
+    width: 105%;
+    padding-bottom: 65px;
+  }
+  .news__image img {
+    width: 100%;
+  }
+  .news__date {
+    font-size: 1.4em;
+    margin: 0;
+    padding-left: 200px;
+  }
+  .news__name {
+    font-size: 2em;
+    text-align: center;
+  }
+  .news__description {
+    font-size: 1.4em;
+    text-align: center;
+  }
+  .advantages__title {
+    margin: 0;
+    width: 49%;
+    padding-left: 40px;
+    font-size: 2.2em;
+    text-align: center;
+  }
+  .advantages__header {
+    margin: 0;
+    width: 700px;
+  }
+  .advantages__box {
+    margin-left: 0;
+    width: 570px;
+    padding-left: 65px;
+    padding-right: 65px;
+  }
+  .advantages__tab {
+    padding: 0;
+    font-size: 0.9em;
+  }
+  .footer {
+    margin: 0;
+    grid-template: 1fr 160px/1fr;
+    width: 52%;
+    padding: 60px 40px;
+  }
+  .footer__blocks {
+    display: none;
+  }
+  .footer__icons {
+    grid-template: 1fr 1fr 1fr/550px;
+    grid-gap: 0;
+  }
+  .footer__icon {
+    font-size: 1em;
+  }
+  .footer__icon img {
+    width: 15%;
+  }
+  .footer__icon:nth-child(3) img {
+    margin-bottom: 0;
+    width: 10%;
+  }
+  .footer__end {
+    font-size: 1.1em;
+    width: 55%;
+    margin-top: 85px;
+  }
+  .footer__phone {
+    text-align: right;
+    margin-top: 40px;
+  }
+  .footer__phone h2 {
+    font-size: 1.3em;
+  }
+  .footer__phone h3 {
+    font-size: 1.2em;
+  }
+  .footer__contacts {
+    justify-self: end;
+  }
+  .footer__socials {
+    text-align: left;
+    padding-left: 35px;
+  }
+  .footer__socials img {
+    width: 12%;
+  }
+}
+@media (max-width: 375px) {
+  .main {
+    padding: 40px 20px;
+  }
+  .header {
+    width: 24.5%;
+    height: 200px;
+  }
+  .header__img1 {
+    width: 40%;
+    margin-left: 90px;
+    margin-top: -60px;
+  }
+  .header__img2 {
+    width: 10%;
+    margin-left: -280px;
+  }
+  .header__img3 {
+    width: 8%;
+    margin-left: 290px;
+    margin-top: -5px;
+  }
+  .head {
+    width: 28.3%;
+    grid-template: 1fr 300px/355px;
+  }
+  .head__foundation {
+    margin-left: -200px;
+  }
+  .head__title {
+    margin-left: -45px;
+    width: 70%;
+  }
+  .head__subtitle {
+    width: 60%;
+    margin-left: -10px;
+  }
+  .head__bgimg {
+    margin-top: 140px;
+    margin-left: 30px;
+  }
+  .suggest {
+    width: 29.8%;
+    grid-template: 53% 53%/40% 40%;
+    font-size: 0.8em;
+  }
+  .suggest p {
+    display: none;
+  }
+  .suggest img {
+    width: 90%;
+  }
+  .suggest__ready-sets {
+    padding: 30px 30px;
+  }
+  .suggest__ready-sets h1 {
+    margin-top: 20px;
+  }
+  .suggest__ready-sets_arrow {
+    margin-left: 35px;
+    margin-top: 30px;
+  }
+  .suggest__collect-own {
+    padding: 30px 30px;
+  }
+  .suggest__collect-own h1 {
+    margin-top: 20px;
+  }
+  .suggest__collect-own_arrow {
+    margin-left: 35px;
+    margin-top: 6px;
+  }
+  .suggest__set-print {
+    padding: 30px 30px;
+  }
+  .suggest__set-print h1 {
+    margin-top: 20px;
+  }
+  .suggest__set-print_arrow {
+    margin-left: 35px;
+    margin-top: 6px;
+  }
+  .suggest__wedding-suggestion {
+    padding: 30px 30px;
+  }
+  .suggest__wedding-suggestion h1 {
+    margin-top: 20px;
+  }
+  .suggest__wedding-suggestion_arrow {
+    margin-left: 35px;
+    margin-top: 6px;
+  }
+  .products__title {
+    margin-left: 100px;
+    margin-top: 150px;
+    font-size: 1.6em;
+  }
+  .products__categories {
+    grid-auto-flow: row;
+    margin-left: 85px;
+  }
+  .products__item {
+    width: 340px;
+    height: 500px;
+  }
+  .products__item img {
+    width: 100%;
+  }
+  .products__item h2 {
+    margin-left: 30px;
+    margin-top: 20px;
+    width: 100%;
+    font-size: 1.7em;
+  }
+  .products__btn {
+    margin-top: 20px;
+  }
+  .products__sliders {
+    margin-top: -30px;
+  }
+  .holidays__title {
+    font-size: 1.6em;
+    width: 20%;
+    margin-left: 50px;
+  }
+  .holidays__body {
+    width: 27%;
+    padding-bottom: 10px;
+  }
+  .holidays__description {
+    width: 95%;
+  }
+  .holidays__img {
+    width: 130%;
+    margin-bottom: 20px;
+    margin-left: -60px;
+    margin-top: -70px;
+  }
+  .holidays__header {
+    width: 340px;
+    height: 130px;
+    font-size: 1.4em;
+  }
+  .holidays__subtitle {
+    font-size: 1.4em;
+    text-align: center;
+    margin: 0;
+  }
+  .holidays__desc-set {
+    font-size: 1.2em;
+    margin-left: 30px;
+    text-align: center;
+    width: 200px;
+  }
+  .holidays__sale {
+    font-size: 1.2em;
+    text-align: center;
+    width: 300px;
+    padding-left: 25px;
+  }
+  .holidays__buy {
+    grid-template: 1fr 1fr/1fr;
+    font-size: 1.3em;
+    width: 70%;
+    margin-left: 40px;
+  }
+  .holidays__busket {
+    justify-self: center;
+    margin-left: -20px;
+    width: 100%;
+  }
+  .holidays__price {
+    justify-self: center;
+  }
+  .popsets__title {
+    font-size: 1.6em;
+    width: 20%;
+    margin-left: -90px;
+  }
+  .popsets__items {
+    width: 340px;
+    grid-gap: 30px;
+  }
+  .popsets__item {
+    width: 340px;
+  }
+  .popsets__image {
+    padding-top: 35px;
+    padding-left: 35px;
+    padding-bottom: 20px;
+  }
+  .popsets__name {
+    font-size: 1.5em;
+  }
+  .popsets p {
+    font-size: 1.1em;
+  }
+  .popsets__buy {
+    width: 280px;
+    font-size: 1em;
+  }
+  .popsets__price {
+    font-size: 1.5em;
+  }
+  .popsets__busket p {
+    display: none;
+  }
+  .popsets__busket img {
+    justify-self: end;
+    width: 20px;
+  }
+  .news__title {
+    font-size: 1.9em;
+    width: 14%;
+    margin-left: -190px;
+  }
+  .news__items {
+    width: 340px;
+    grid-gap: 30px;
+  }
+  .news__item {
+    width: 270px;
+    padding: 35px 35px;
+  }
+  .news__image {
+    margin: 0;
+    padding-bottom: 20px;
+  }
+  .news__image img {
+    margin-left: -8px;
+  }
+  .news__name {
+    font-size: 1.5em;
+  }
+  .news__date {
+    padding-left: 85px;
+  }
+  .news p {
+    font-size: 1.1em;
+  }
+  .advantages__title {
+    font-size: 1.6em;
+    width: 20%;
+    margin-left: 10px;
+  }
+  .advantages__tab {
+    padding: 20px;
+  }
+  .advantages__tab h2 {
+    display: none;
+  }
+  .advantages__header {
+    width: 340px;
+  }
+  .advantages__box {
+    padding: 40px;
+    width: 260px;
+  }
+  .advantages__image {
+    height: 270px;
+  }
+  .advantages p {
+    margin-left: -270px;
+    text-align: center;
+    margin-top: 300px;
+  }
+  .advantages p:nth-child(2) {
+    margin-top: -10px;
+  }
+  .footer {
+    width: 295px;
+    height: 580px;
+  }
+  .footer__icons {
+    width: 210px;
+    margin: 0;
+  }
+  .footer__icon {
+    margin-left: 50px;
+    width: 200px;
+  }
+  .footer__icon img {
+    width: 20%;
+  }
+  .footer__icon p {
+    margin: 0;
+    padding-top: 20px;
+    font-size: 0.8em;
+  }
+  .footer__icon:nth-child(3) img {
+    width: 10%;
+  }
+  .footer__phone {
+    margin-top: -70px;
+    margin-left: -80px;
+  }
+  .footer__phone h2 {
+    text-align: center;
+  }
+  .footer__phone h3 {
+    text-align: left;
+    padding-left: 35px;
+  }
+  .footer__end {
+    font-size: 0.9em;
+    width: 295px;
+    text-align: center;
+    margin-top: 220px;
+  }
+  .footer__socials {
+    width: 150%;
+    margin-left: -55px;
+    margin-top: 40px;
+  }
+}
+.products__content {
+  display: flex;
+  justify-content: left;
+}

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Macaron Shop</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="wrapper">
+
+            <header class="header">
+                <nav class="header__menu">
+                    <a href=""><img src="images/menu/logo.png" alt="logo" class="header__img1"></a>
+                    <ul class="header__list" id="menulist">
+                        <li>
+                            <a href="#holidays" class="header__link">Сладкие дни</a>
+                        </li>
+                        <li>
+                            <a href="#popsets" class="header__link">Подарочные наборы</a>
+                        </li>
+                        <li>
+                            <a href="https://www.vip-masters.ru/workshops/master-klass-po-vypechke-makarons/" target="_blank" class="header__link">Создать дизайн</a>
+                        </li>
+                        <li>
+                            <a href="https://mon-bon.ru/info/b2b/" class="header__link">Компаниям</a>
+                        </li>
+                    </ul>
+                    <a href=""><img src="images/menu/busket.svg" alt="Корзина" class="header__img3"></a>
+                    <!--Создание бургер меню-->
+                    <div class="hamb-filed" id="hamb">
+						<img src="images/menu/burger-menu.png" alt="бургер-меню" class="header__img2">
+					</div>
+                </nav>
+            </header>
+			<div class="popup" id="popup"> </div>
+
+            <main class="main">
+                <section class="content">
+
+                    <section class="content__head head">
+                        <img src="images/mainscreen/background.png" alt="heart with macarons" class="head__bgimg">
+                        <div class="head__text">
+                            <div class="head__foundation">
+                                <h2 class="head__foundation_title">Macaronshop</h2>
+                                <p class="head__foundation_subtitle">since 2013</p>
+                            </div>
+                            <div class="head__title">
+                                <h1>Настоящая любовь</h1>
+                            </div>
+                            <div class="head__subtitle">
+                                <p>Пирожные макарон и другие десерты из натуральных ингредиентов, приготовленные с любовью</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <a name="collect_set">
+                    <section class="content__suggest suggest">
+                        <div class="suggest__ready-sets">
+                            <img src="images/mainscreen/icon-ready-sets.png" alt="иконка" class="suggest__icon1">
+                            <h1>Готовые наборы</h1>
+                            <div class="suggest__ready-sets_arrow"><div></div></div>
+                            <p>Готовые наборы со скидкой.</p>
+                            <p>Вы можете подобрать набор на подходящий случай.</p>
+                        </div>
+                        <div class="suggest__collect-own">
+                            <img src="images/mainscreen/icon-collect-own.png" alt="иконка" class="suggest__icon2">
+                            <h1>Собрать свой набор</h1>
+                            <div class="suggest__collect-own_arrow"><div></div></div>
+                            <p>Выбрать количество макарун, и выбрать вкусы</p>
+                        </div>
+                        <div class="suggest__set-print">
+                            <img src="images/mainscreen/icon-set-print.png" alt="иконка" class="suggest__icon3">
+                            <h1>Набор с личной печатью</h1>
+                            <div class="suggest__set-print_arrow"><div></div></div>
+                            <p>Собрать набор макарон с уникальным дизайном. </p>
+                        </div>
+                        <div class="suggest__wedding-suggestion">
+                            <img src="images/mainscreen/icon-wedding-suggestion.png" alt="иконка" class="suggest__icon4">
+                            <h1>Идеи для свадьбы</h1>
+                            <div class="suggest__wedding-suggestion_arrow"><div></div></div>
+                            <p>Нежные пирожные макаронс с разными вкусами для украшения вашего свадебного торжества</p>
+                        </div>
+                    </section>
+                    </a>
+
+                    <a name="catalog"><section class="content__products products"></a>
+                        <!--Фильтр-->
+                        <div class="products__title">
+                            <h1>Товары</h1>
+                        </div>
+                        <div class="products__categories">
+                            <div class="products__categories_tab cat-active" data-category="all">
+                                <h2>Все</h2>
+                            </div>
+                            <div class="products__categories_tab" data-category="macaron">
+                                <h2>Макаронс</h2>
+                            </div>
+                            <div class="products__categories_tab" data-category="pie">
+                                <h2>Пирожные</h2>
+                            </div>
+                            <div class="products__categories_tab" data-category="candy">
+                                <h2>Конфеты</h2>
+                            </div>
+                        </div>
+
+                        <div class="products__content">
+                            <div class="products__items items-active">
+                                <div class="products__item products__items_macaron" data-category="macaron">
+                                    <div class="products__image">
+                                        <img src="images/products/1.png" alt="Необычные макаронс">
+                                    </div>
+                                    <div class="products__heading">
+                                        <h2>Макаронс с необычным вкусом</h2>
+                                    </div>
+                                </div>
+                                <div class="products__item products__items_macaron" data-category="macaron">
+                                    <div class="products__image">
+                                        <img src="images/products/macaron-vanil.png" alt="Макаронс с ванилью">
+                                    </div>
+                                    <div class="products__heading">
+                                        <h2>Макаронс с ванилью</h2>
+                                    </div>
+                                </div>
+                                <div class="products__item products__items_candy" data-category="candy">
+                                    <div class="products__image">
+                                        <img src="images/products/4.png" alt="Карамель на палочке">
+                                    </div>
+                                    <div class="products__heading">
+                                        <h2>Карамель на палочке из натуральных ингредиентов</h2>
+                                    </div>
+                                </div>
+                                <div class="products__item products__items_candy" data-category="candy">
+                                    <div class="products__image">
+                                        <img src="images/products/2.png" alt="Конфеты на миндальном печенье и креме">
+                                    </div>
+                                    <div class="products__heading">
+                                        <h2>Аппетитные конфеты на основе миндального печенья и крема</h2>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="products__items">
+                                <div class="products__item products__items_pie" data-category="pie">
+                                    <div class="products__image">
+                                        <img src="images/products/candies-rainbow.png" alt="Кейк-попсы радужные">
+                                    </div>
+                                    <div class="products__heading">
+                                        <h2>MINI набор кейк-попсов «Радужный»</h2>
+                                    </div>
+                                </div>
+                                <div class="products__item products__items_pie" data-category="pie">
+                                    <div class="products__image">
+                                        <img src="images/products/3.png" alt="Шоколадные пирожное">
+                                    </div>
+                                    <div class="products__heading">
+                                        <h2>Шоколадное пирожное картошка на основе бисквита!</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!--Слайдер-->
+                        <button class="products__prev products__btn">Назад</button>
+                        <button class="products__next products__btn">Далее</button>
+                        <div class="products__sliders">
+                            <div class="products__slider slide-active"></div>
+                            <div class="products__slider"></div>
+                        </div>
+                    </section>
+
+                    <!--Модальное окно-->
+                    <div class="cookies" id="cookies">
+                        <div class="cookies__descr">
+                            Пользуясь нашим сайтом, вы соглашаетесь с тем, что
+                            <a class="cookies__link" href="#">мы используем cookies</a>
+                        </div>
+                        <div class="cookies__btn" id="cookies__btn">Окей</div>
+                    </div>
+
+                    <!--Аккордеон-->
+                    <a name="holidays"><section class="content__holidays holidays"></a>
+                        <div class="holidays__title">
+                            <h1>Ближайшие праздники</h1>
+                        </div>
+                        <div class="holidays__item holidays__item_show" id="accordeon-1">
+                            <div class="holidays__header">
+                                <img src="images/holidays/macaron-orange.png">
+                                Пасха
+                            </div>
+                            <div class="holidays__body">
+                                <img src="images/holidays/holidays-easter.png" alt="Набор для поздравления с Пасхой" class="holidays__img">
+                                <div class="holidays__description">
+                                    <h2 class="holidays__subtitle">Пасхальный набор «Светлой Пасхи»</h2>
+                                    <div class="holidays__desc-set">
+                                        <p>12 штук в коробке.</p>
+                                        <p><span>Вкусы:</span> ассорти</p>
+                                    </div>
+                                    <p class="holidays__sale">1260 руб</p>
+                                </div>
+                                <div class="holidays__buy">
+                                    <p class="holidays__price">
+                                        1190 руб
+                                    </p>
+                                    <a href="" class="holidays__busket">
+                                        <img src="images/popsets/busket2.svg" alt="корзина">
+                                        <p>Купить</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="holidays__item" id="accordeon-2">
+                            <div class="holidays__header">
+                                <img src="images/holidays/macaron-orange.png">
+                                Скоро день рождения близкого человека
+                            </div>
+                            <div class="holidays__body">
+                                <img src="images/holidays/holidays-birthday.png" alt="Набор для поздравления с Днем рождения" class="holidays__img">
+                                <div class="holidays__description">
+                                    <h2 class="holidays__subtitle">Набор-комбо «С Днем рождения»</h2>
+                                    <div class="holidays__desc-set">
+                                        <p>3 макаронс + 4 эклера в коробке.</p>
+                                        <p><span>Вкусы:</span> ассорти</p>
+                                    </div>
+                                    <p class="holidays__sale">1260 руб</p>
+                                </div>
+                                <div class="holidays__buy">
+                                    <p class="holidays__price">
+                                        1190 руб
+                                    </p>
+                                    <a href="" class="holidays__busket">
+                                        <img src="images/popsets/busket2.svg" alt="корзина">
+                                        <p>Купить</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="holidays__item" id="accordeon-3">
+                            <div class="holidays__header">
+                                <img src="images/holidays/macaron-orange.png">
+                                День свадьбы
+                            </div>
+                            <div class="holidays__body">
+                                <img src="images/holidays/holidays-love.png" alt="Набор для поздравления с Днем Свадьбы" class="holidays__img">
+                                <div class="holidays__description">
+                                    <h2 class="holidays__subtitle">Подарочный набор ко Дню Свадьбы</h2>
+                                    <div class="holidays__desc-set">
+                                        <p>12 макаронс в коробке.</p>
+                                        <p><span>Вкусы:</span> ассорти</p>
+                                    </div>
+                                    <p class="holidays__sale">1400 руб</p>
+                                </div>
+                                <div class="holidays__buy">
+                                    <p class="holidays__price">
+                                        1210 руб
+                                    </p>
+                                    <a href="" class="holidays__busket">
+                                        <img src="images/popsets/busket2.svg" alt="корзина">
+                                        <p>Купить</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <a name="popsets"><section class="content__popsets popsets"></a>
+                        <div class="popsets__title">
+                            <h1>Популярные наборы</h1>
+                        </div>
+
+                        <div class="popsets__items">
+                            <div class="popsets__item">
+                                <div class="popsets__image">
+                                    <img src="images/popsets/набор1.png" alt="набор-сердце">
+                                </div>
+                                <div class="popsets__heading">
+                                    <a href="" class="popsets__name">
+                                        Сердце
+                                    </a>
+                                    <div class="popsets__description">
+                                        <p>24 штуки в коробке в виде сердца.</p>
+                                        <p class="popsets__description1">Ассорти из 6 вкусов</p>
+                                    </div> 
+                                </div>
+                                <div class="popsets__buy">
+                                    <a href="" class="popsets__price">
+                                        2800 руб
+                                    </a>
+                                    <a href="" class="popsets__busket">
+                                        <img src="images/popsets/busket2.svg" alt="корзина">
+                                        <p>В корзину</p>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="popsets__item">
+                                <div class="popsets__image">
+                                    <img src="images/popsets/набор2.png" alt="набор-красота прямоугольный">
+                                </div>
+                                <div class="popsets__heading">
+                                    <a href="" class="popsets__name">
+                                        Красота спасёт мир
+                                    </a>
+                                    <div class="popsets__description">
+                                        <p>Набор 16 шт. Вкусы: клубника - базилик, кокос, голубой сыр, пармезан</p>
+                                    </div>
+                                </div>
+                                <div class="popsets__buy">
+                                    <a href="" class="popsets__price">
+                                        750 руб
+                                    </a>
+                                    <a href="" class="popsets__busket">
+                                        <img src="images/popsets/busket2.svg" alt="корзина">
+                                        <p>В корзину</p>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="popsets__item">
+                                <div class="popsets__image">
+                                    <img src="images/popsets/набор3.png" alt="набор в виде круга">
+                                </div>
+                                <div class="popsets__heading">
+                                    <a href="" class="popsets__name">
+                                        Круглый набор
+                                    </a>
+                                    <div class="popsets__description">
+                                        <p>40 макаронс в круглой коробке с персональной надписью</p>
+                                    </div>
+                                </div>
+                                <div class="popsets__buy">
+                                    <a href="" class="popsets__price">
+                                        3900 руб
+                                    </a>
+                                    <a href="" class="popsets__busket">
+                                        <img src="images/popsets/busket2.svg" alt="корзина">
+                                        <p>В корзину</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <a name="news"><section class="content__news news"></a>
+                        <div class="news__title">
+                            Новости
+                        </div>
+                        <div class="news__items">
+                            <div class="news__item">
+                                <div class="news__image">
+                                    <img src="images/news/new1.png" alt="8 марта">
+                                </div>
+                                <div class="news__date">
+                                    25.02.2023
+                                </div>
+                                <a href="" class="news__name">
+                                    <p>Совсем скоро главный праздник весны!</p>
+                                </a>
+                                <div class="news__description">
+                                    Девушки любят, когда вкусно, красиво и натурально. Смотрите больше наборов с десертами ручной работы
+                                </div>
+                            </div>
+
+                            <div class="news__item">
+                                <div class="news__image">
+                                    <img src="images/news/new2.png" alt="23 февраля">
+                                </div>
+                                <div class="news__date">
+                                    17.02.2023
+                                </div>
+                                <a href="" class="news__name">
+                                    <p>Конкурс на 23 февраля!</p>
+                                </a>
+                                <div class="news__description">
+                                    День Защитника Отечества уже совсем скоро! Порадуйте своего сладкоежку с помощью аппетитных наборов от МакаронШоп
+                                </div>
+                            </div>
+
+                            <div class="news__item">
+                                <div class="news__image">
+                                    <img src="images/news/new3.png" alt="День Святого Валентина">
+                                </div>
+                                <div class="news__date">
+                                    11.02.2023
+                                </div>
+                                <a href="" class="news__name">
+                                    <p>Экспресс-конкурс ко дню Святого Валентина</p>
+                                </a>
+                                <div class="news__description">
+                                    Подарок уже через 2 дня<br>День всех влюблённых не за горами. Расскажи о своих чувствах с помощью сладкой валентинки от МакаронШоп
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <a name="company"><section class="content__advantages advantages"></a>
+                        <div class="advantages__title">
+                            <h1>Мы обо всём позаботились</h1>
+                        </div>
+                        
+                        <!--Табы-->
+                        <div class="advantages__header">
+                            <div class="advantages__tab tab-active">
+                                <h2>Лучшие ингредиенты</h2>
+                            </div>
+        
+                            <div class="advantages__tab">
+                                <h2>Упаковка</h2>
+                            </div>
+        
+                            <div class="advantages__tab">
+                                <h2>Получение в день заказа</h2>
+                            </div>
+        
+                            <div class="advantages__tab">
+                                <h2>Анонимная доставка</h2>
+                            </div>
+                        </div>
+                        
+                        <div class="advantages__box fade">
+                            <div class="advantages__block">
+                                <div class="advantages__image">
+                                    <img src="images/care/лучшие ингр.png" alt="ингредиенты">
+                                </div>
+                                <div class="advantages__description">
+                                    <p>У нас самые работают самые лучшие кондитеры России</p>
+                                    <p>В каждый макарон добавляем частичку своей любви к вам!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="advantages__box fade">
+                            <div class="advantages__block">
+                                <div class="advantages__image">
+                                    <img src="images/care/package.png" alt="красивая упаковка">
+                                </div>
+                                <div class="advantages__description">
+                                    <p>Упаковываем макаронс в уникальные коробки, которые легко перевозить на переработку</p>
+                                    <p>Можем украсить ленточками, ягодами</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="advantages__box fade">
+                            <div class="advantages__block">
+                                <div class="advantages__image">
+                                    <img src="images/care/delivery.png" alt="доставка">
+                                </div>
+                                <div class="advantages__description">
+                                    <p>В день заказа доставка курьером или самовывоз</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="advantages__box fade">
+                            <div class="advantages__block">
+                                <div class="advantages__image">
+                                    <img src="images/care/anonymus.png" alt="анонимный подарок">
+                                </div>
+                                <div class="advantages__description">
+                                    <p>Можем преподнести Ваш заказ как анонимный подарок</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                </section>
+            </main>
+
+            <footer class="footer">
+                <div class="footer__left">
+                    <div class="footer__icons">
+                        <div class="footer__icon">
+                            <img src="images/footer/icon1.svg" alt="иконка">
+                            <p>Готовим вручную и с любовью</p>
+                        </div>
+                        <div class="footer__icon">
+                            <img src="images/footer/icon2.svg" alt="иконка">
+                            <p>Доставим в день заказа</p>
+                        </div>
+                        <div class="footer__icon">
+                            <img src="images/footer/icon3.svg" alt="иконка">
+                            <p>100% миндальная мука и натуральные ингредиенты</p>
+                        </div>
+                    </div>
+        
+                    <div class="footer__end">
+                        © 2021 Макароншоп ООО "Квантум", Санкт-Петербург,  улица Маршала Тухачевского, дом 22
+                    </div>
+                </div>
+
+                <div class="footer__blocks">
+                    <div class="footer__block">
+                        <div class="footer__name">
+                            <h2>Информация</h2>
+                        </div>
+                        <li><a href="#company">О компании</a></li>
+                        <li><a href="#company">Гарантии вкуса и свежести</a></li>
+                        <li><a href="https://online.sberbank.ru/CSAFront/index.do" target="_blank">Доставка и оплата</a></li>
+                        <li><a href="https://vk.com/macaronshop" target="_blank">Контакты</a></li>
+                    </div>
+                    <div class="footer__block">
+                        <div class="footer__name">
+                            <h2>Каталог</h2>
+                        </div>
+                        <li><a href="#catalog">Каталог десертов</a></li>
+                        <li><a href="#popsets">Готовые наборы</a></li>
+                        <li><a href="#collect_set">Собрать свой набор</a></li>
+                        <li><a href="#news">Акции</a></li>
+                    </div>
+                    <div class="footer__block">
+                        <div class="footer__name">
+                            <h2>Для бизнеса</h2>
+                        </div>
+                        <li><a href="https://www.wildberries.ru/" target="_blank">Корпоративные подарки</a></li>
+                        <li><a href="https://youtu.be/6_2vdCKtESA?si=hioOzFRZRGirdZLw" target="_blank">Для юридических лиц</a></li>
+                        <li><a href="https://clck.ru/3AkzD4" target="_blank">Оптовикам</a></li>
+                    </div>
+                </div>
+
+                <div class="footer__contacts">
+                    <div class="footer__phone">
+                        <h2>+7 (812) 309 82 88</h2>
+                        <h3>с 9:00 до 21:00</h3>
+                    </div>
+                    <div class="footer__socials">
+                        <a href="https://ru.pinterest.com/pin/846887904957399371/" target="_blank"><img src="images/footer/insta.png" alt="инстаграм"></a>
+                        <a href="https://rutube.ru/" target="_blank"><img src="images/footer/facebook.png" alt="фейсбук"></a>
+                        <a href="https://vk.com/macaronshop" target="_blank"><img src="images/footer/vk.png" alt="вконтакте"></a>
+                    </div>
+                </div>
+            </footer>
+            
+        </div>
+
+        <script src="burger.js"></script>
+        <script src="./slider.js"></script>
+        <script src="filter.js"></script>
+        <script src="accordeon.js"></script>
+        <script src="window.js"></script>
+        <script src="tabs.js"></script>
+    </body>
+</html>
